@@ -1,0 +1,95 @@
+@use "_base";
+@use "_layout";
+@use "_component";
+
+@keyframes buttonTransition {
+    0% {
+        background-color: rgb(57, 80, 207);
+        border-color: hsl(60, 100%, 50%);
+        color: aquamarine;
+        padding-bottom: 0.5em;
+    }
+
+    50% {
+        background-color: cadetblue;
+        border-color: red;
+        color: rgb(219, 219, 219);
+
+    }
+
+    100% {
+        border-color: blue;
+        color: rgb(250, 255, 234);
+        background-color: rgb(138, 225, 124);
+    }
+}
+
+
+@keyframes popupDog {
+    0% {
+        transform: translate(0px, 500px);
+    }
+
+    100% {
+        transform: translate(0px, 100px);
+    }
+}
+
+#popupDog {
+    margin-top: -500px;
+    animation-name: popupDog;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes goldenDogAnimation {
+    0% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(25deg);
+    }
+}
+
+#goldenDog2 {
+    animation-name: goldenDogAnimation;
+    animation-duration: 2.5s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes tacoAnimation {
+    0% {
+        top: 0;
+        left: 40%;
+    }
+
+    25% {
+        top: 50%;
+        left: 10%;
+    }
+
+    50% {
+        top: 20%;
+        left: 50%;
+    }
+
+    75% {
+        top: 0%;
+        left: 60%;
+    }
+
+    100% {
+        top: 6%;
+        left: 30%;
+    }
+}
+
+#taco {
+    margin-top: 10em;
+    position: absolute;
+    animation: tacoAnimation 5s alternate-reverse infinite;
+}

@@ -1,0 +1,92 @@
+@use "base";
+
+button {
+    background-color: base.$background-color2;
+    width: 10em;
+    color: white;
+    border-color: white;
+    border-style: solid;
+}
+
+#dogButton {
+    display: block;
+    transition: 2s;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    font-family: monospace;
+    font-size: 2.5em;
+    height: 4em;
+    margin-bottom: 4em;
+    border-width: 10px;
+    border-style: outset;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.482);
+   animation-name: buttonTransition;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#dogButton:hover {
+    width: 50%;
+    border-style:inset;
+    border-width: 10px;
+   box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.412);
+}
+
+
+button:hover {
+    background-color: rgb(23, 38, 33);
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: base.$accent-color1;
+    transition: 0.5s;
+}
+
+#headertext {
+    font-family: monospace;
+    font-size: 30px;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 1em;
+    margin: auto;
+    text-align: center;
+    text-shadow: 2px 2px 1px black;
+}
+
+.close-hamburger {
+    margin-top: 2em;
+    border-radius: 10px;
+}
+
+.open-hamburger,
+.close-hamburger {
+    padding: 1em;
+    border-radius: 10px;
+    margin: 2em;
+}
+
+.open-hamburger {
+    margin: auto;
+}
+
+article {
+    @include base.border(10px, 1em, base.$background-color1, false)
+}
+
+img {
+    @include base.border(10px, 1em, base.$background-color1, true);
+}
+
+#sasstext {
+    background-color: rgba(0, 0, 0, 0.704);
+    padding-left: 2em;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+}

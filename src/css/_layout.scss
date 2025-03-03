@@ -1,0 +1,288 @@
+@use "base";
+@use "component";
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 2000px;
+
+    font-family: base.$font-stack;
+}
+
+body {
+    background-color: base.$light-background;
+}
+
+#dogButton {
+    position: relative;
+    margin-top: 5em;
+    z-index: 1000;
+    text-align: center;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.dogDiv {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    img {
+        border: 0;
+    }
+}
+
+.golden_container {
+    width: 30em;
+    margin-left: 2em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30em;
+
+    #goldenDog1 {
+        position: relative;
+        width: 100%;
+    }
+
+    #goldenDog2 {
+        left: -140;
+        top: -23;
+        position: relative;
+        width: 40%;
+    }
+}
+
+#taco_container {
+
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    z-index: 999;
+    overflow: hidden;
+    position: absolute;
+}
+
+#taco {
+    border: 0;
+    width: 10em;
+    margin: auto;
+}
+
+#animationfooter {
+    margin: 0;
+}
+
+li {
+    @extend a;
+}
+
+
+header {
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: base.$background-color1;
+
+    .hamburgermenu {
+        display: none;
+        justify-items: center;
+        position: absolute;
+        width: 60%;
+        top: 0;
+        height: 100%;
+        right: 0;
+        background-color: base.$background-color1;
+        z-index: 9999;
+
+        a {
+
+            padding: 2em;
+            color: white;
+        }
+    }
+
+}
+
+a {
+    border-radius: 10px;
+    color: white;
+}
+
+
+
+.laptopmenu {
+    display: none;
+    margin: auto;
+}
+
+ul {
+    text-align: center;
+    padding: 1em;
+
+    li {
+        display: block;
+        padding-left: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: 2em;
+    }
+
+    li:hover {
+        color: lighten(base.$font-color, 5%);
+        background-color: base.$background-color1;
+        text-decoration: underline;
+    }
+
+}
+
+
+
+h1 {
+    padding-top: 2em;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    @extend h1;
+    padding-top: 1em;
+    font-size: 20px;
+}
+
+#charts {
+    width: 70%;
+    margin: auto;
+}
+
+article {
+    background-color: rgb(226, 224, 224);
+    width: 70%;
+    color: white;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    box-shadow: base.$box-shadow;
+    padding: 3em;
+    text-align: center;
+    background-image: url("../images/image1.jpg");
+    background-position: center;
+    height: fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+footer {
+    background-color: base.$background-color2;
+    width: 100%;
+    text-align: center;
+    padding-top: 2em;
+    margin-top: 4em;
+    padding-bottom: 2em;
+    position: absolute;
+}
+
+p {
+    color: white;
+    padding-top: 1em;
+    line-height: 2em;
+    width: 70%;
+    margin: auto;
+}
+
+section {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    padding: 1em;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media all and (min-width: 800px) {
+
+    .golden_container {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+#taco_container {
+width: 60%;
+}
+    button {
+        display: none;
+        z-index: 1000;
+    }
+
+    #popupDog {
+        margin-left: 20%;
+        overflow: hidden;
+        width: 25em;
+        padding-top: 30em;
+        position: relative;
+    }
+
+    .dogDiv {
+        overflow:hidden;
+        margin: auto;
+        width: 50%;
+        margin: auto;
+    }
+
+    .hamburgermenu nav {
+        display: none;
+    }
+
+    .laptopmenu {
+        display: flex;
+        flex-direction: column;
+        background-color: base.$background-color2;
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            color: base.$font-color;
+        }
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: base.$dark-background;
+    }
+
+    header {
+        background-color: base.$dark-background-color1;
+
+        a:hover {
+            background-color: darken(base.$dark-background-color1, 30%);
+        }
+
+    }
+
+    footer,
+    h2 {
+        color: white;
+    }
+
+    .hamburgermenu {
+        background-color: darken(base.$dark-background-color1, 30%);
+
+        a {
+            color: white;
+        }
+    }
+
+}

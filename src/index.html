@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment4</title>
+    <script src="js/script.js" type="module"></script>
+    <link rel="stylesheet" href="./css/main.scss">
+</head>
+
+<body>
+    <header>
+<p id="headertext">Laborations-webbplats</p>
+        <button class="open-hamburger">
+            Meny
+        </button>
+        <div class="laptopmenu">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="sass.html">SASS</a></li>
+                    <li><a href="animationer.html">Animationer</a></li>
+                    <li><a href="diagram.html">Diagram</a></li>
+                    <li><a href="karta.html">Karta</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--Mobile menu-->
+        <div class="hamburgermenu">
+            <button class="close-hamburger">
+                Stäng meny
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="sass.html">SASS</a></li>
+                    <li><a href="animationer.html">Animationer</a></li>
+                    <li><a href="diagram.html">Diagram</a></li>
+                    <li><a href="karta.html">Karta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h1>Webbutvecklings-programmet, frontend-utveckling</h1>
+            <h2>Rosali Johansson</h2>
+            <p>Det här är min webbplats för kursen Frontend-utveckling. I den här kursen lär vi oss att automatisera
+                processen vid skapande av webbplatser via parcel, SASS, med mera.</p>
+        </article>
+        <section>
+            <h2>Bilder</h2>
+      
+        <picture>
+            <source srcset="./images/image3.jpg?as=avif&width=500" type="image/avif">
+            <img src="./images/image3.jpg?width=500" alt="Vandring i Lofoten">
+        </picture>
+
+        <picture>
+            <source srcset="./images/image2.png?as=avif&width=500" type="image/avif">
+            <img src="./images/image2.png?as=jpg&width=500" alt="Äng i Lofoten" width="500"> 
+        </picture>  </section>
+    </main>
+    <!--footer-->
+    <footer>
+        <p>Laborationsuppgift för kursen Frontend-baserad utveckling
+        </p>
+        <p>Mittuniversitetet</p>
+        <p>Copyright © 2025 Rosali Johansson</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+$font-color: rgb(232, 248, 236);
+$font-stack: arial, sans-serif;
+$background-color1: rgb(51, 131, 82);
+$background-color2: rgb(16, 108, 51);
+$accent-color1: darken($background-color1, 90%);
+$box-shadow: 6px 5px 5px $accent-color1;
+$dark-background: rgb(14, 16, 13);
+$light-background:rgb(226, 228, 215);
+$dark-background-color1: darken($background-color1, 20%);
+
+@mixin border($radius, $width, $color, $image) {
+    border-radius: $radius;
+    border-style: solid;
+    border-width: $width;
+    border-color: $color;
+    
+    @if $image {
+      margin-top: 2em;
+      width: 90%;
+    } @else {
+        padding:5%;
+    }
+}

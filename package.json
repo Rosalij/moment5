@@ -1,0 +1,21 @@
+{
+  "name": "moment4",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "description": "Detta är en webbplats för moment 4 i kursen Frontend-utveckling på mittuniversitetet.",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserlist": "> 0.5%, lst 2 versions, not dead",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3",
+    "sharp": "^0.33.5"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.8"
+  }
+}
