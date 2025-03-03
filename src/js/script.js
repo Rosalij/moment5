@@ -113,20 +113,18 @@ async function createProgramChart() {
     const topPrograms = showPrograms.slice(0, 5);
 console.log(topPrograms)
 
-Chart.register(Colors);
+
     const ctx = document.getElementById('myProgramChart')
     new Chart(ctx, {
-        type: 'doughnut',
+        type: 'pie',
         data: {
             labels: topPrograms.map(program => program.name),
             datasets: [{
                 label: 'Totalt antal sökande',
                 data: topPrograms.map(program => program.applicantsTotal),
-                backgroundColor: 'rgba(181, 143, 21, 0.8)',
-                backgroundColor: 'rgba(77, 73, 59, 0.8)',
-                backgroundColor: 'rgba(181, 143, 21, 0.8)',
+                backgroundColor: colorScheme,
                 borderColor: 'rgb(0, 0, 0)',
-                borderWidth: 1
+                borderWidth: 2
             }]
         },
         options: {
@@ -145,3 +143,19 @@ Chart.register(Colors);
 
 
 if (canvasEl) {createCourseChart(), createProgramChart()};
+
+
+/**
+ * color Scheme for Diagrams
+ */
+const colorScheme = [
+    "#25CCF7","#FD7272","#54a0ff","#00d2d3",
+    "#1abc9c","#2ecc71","#3498db","#9b59b6","#34495e",
+    "#16a085","#27ae60","#2980b9","#8e44ad","#2c3e50",
+    "#f1c40f","#e67e22","#e74c3c","#ecf0f1","#95a5a6",
+    "#f39c12","#d35400","#c0392b","#bdc3c7","#7f8c8d",
+    "#55efc4","#81ecec","#74b9ff","#a29bfe","#dfe6e9",
+    "#00b894","#00cec9","#0984e3","#6c5ce7","#ffeaa7",
+    "#fab1a0","#ff7675","#fd79a8","#fdcb6e","#e17055",
+    "#d63031","#feca57","#5f27cd","#54a0ff","#01a3a4"
+]
