@@ -1,4 +1,4 @@
-"use strict";  //rosali Johansson, Mittuniversitetet 2025-02-06
+"use strict";  //rosali Johansson, Mittuniversitetet 2025-03-05
 
 
 //code for mobile and tablet version, hamburgerbar show/hide
@@ -43,7 +43,7 @@ function displayDogs() {
         * @throws {Error} if incorrect fetch
         * @returns {Array} Returns JSON array about university courses
         */
-async function fetchData() {
+async function fetchCourseData() {
     try {
         const response = await fetch('https://studenter.miun.se/~mallar/dt211g/');
         if (!response.ok) {
@@ -63,7 +63,7 @@ async function fetchData() {
         * @function createCourseChart()
         */ 
 async function createCourseChart() {
-    const courses = await fetchData();
+    const courses = await fetchCourseData();
 
     const showCourses = courses.filter(course => course.type === "Kurs");
 
@@ -104,7 +104,7 @@ async function createCourseChart() {
         * @function createProgramChart()
         */ 
 async function createProgramChart() {
-    const programs = await fetchData();
+    const programs = await fetchCourseData();
 
     const showPrograms = programs.filter(data => data.type === "Program");
 

@@ -159,6 +159,7 @@ h2 {
 }
 
 #chart2 {
+    display: flex;
     width: 50%;
     margin: auto;
     padding-top: 10em;
@@ -212,6 +213,38 @@ section {
     align-items: center;
 }
 
+#map {
+border: 0;
+    height: 400px;
+    width: 70%;
+    margin: auto;
+  }
+
+  .mapContainer {
+    border: 0;
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+input #text{
+    padding: 2em;
+    margin: auto;
+}
+
+label {
+    font-size: 24px;
+    margin-right: 1em;
+}
+
+input {
+    
+    background-color: antiquewhite;
+    width: 20em;
+    padding: 1em;
+    border-radius: 10px;
+margin: auto;
+}
 
 @media all and (min-width: 800px) {
 
