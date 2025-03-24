@@ -21,6 +21,8 @@ if (openHamburgerEl) {
 if (closeHamburgerEl) {
     closeHamburgerEl.addEventListener("click", toggleMenu)
 }
+
+
 function toggleMenu() {
 
     let style = window.getComputedStyle(hamburgerMenuEl)
@@ -71,6 +73,7 @@ async function createCourseChart() {
 
     const topCourses = showCourses.slice(0, 6);
 
+    //creates bar chart 
     const ctx = document.getElementById('myCourseChart')
     new Chart(ctx, {
         type: 'bar',
@@ -111,9 +114,9 @@ async function createProgramChart() {
     showPrograms.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
 
     const topPrograms = showPrograms.slice(0, 5);
-console.log(topPrograms)
 
 
+//creates pie chart
     const ctx = document.getElementById('myProgramChart')
     new Chart(ctx, {
         type: 'pie',
