@@ -5,15 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moment5</title>
-    <script src="js/map.js" type="module"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/> <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>   
-        <script src="js/map.js" type="module"></script>
-  <link rel="stylesheet" href="./css/main.scss">
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="./css/main.scss">
 </head>
 
 <body>
@@ -54,7 +49,11 @@
     <main>
         <h1>Karta</h1>
         <div class="mapContainer">
-            <label for="input" id="text">Sök plats:</label><input type="text">
+            <form id="searchForm">
+                <input type="text" name="q" id="searchInput" placeholder="Sök här..." required>
+                <button type="submit" id="search-button">Sök</button>
+                <br><br>
+            </form> 
             <div id="map"></div>
 
         </div>
@@ -65,5 +64,9 @@
         </p>
         <p>Mittuniversitetet</p>
     </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="js/map.js"></script>
+</body>
 
 </html>

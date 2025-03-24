@@ -53,6 +53,24 @@ body {
     }
 }
 
+form {
+    display: inline-flex;
+    padding-bottom: 2em;
+}
+
+#search-button {
+    background-color: rgb(54, 93, 80);
+    width: 10em;
+    border-radius: 10px;
+    display: block;
+    height: 5em;
+    margin: auto;
+    transition: 1s;
+}
+
+#search-button:hover {
+    background-color: base.$background-color1
+}
 #taco_container {
 
     height: 100%;

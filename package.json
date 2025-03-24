@@ -12,10 +12,14 @@
   "browserlist": "> 0.5%, lst 2 versions, not dead",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
+    "jsdoc": "^4.0.4",
     "parcel": "^2.13.3",
     "sharp": "^0.33.5"
   },
   "dependencies": {
-    "chart.js": "^4.4.8"
+    "@geoapify/leaflet-address-search-plugin": "^1.0.2",
+    "chart.js": "^4.4.8",
+    "leaflet": "^1.9.4",
+    "nominatim": "^0.1.0"
   }
 }
